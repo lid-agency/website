@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Пространство LID</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap"></noscript>
+<link rel="stylesheet" href="styles.css?v=20261101g">
+<style>
+/* space page: 200 m2 first, rooms as a price list, team, then the turnkey event */
+.sp-top{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,5vw,72px);align-items:center}
+.sp-top .h2{font-size:clamp(40px,4.3vw,58px);margin:0}
+.sp-top .mark{white-space:normal}
+.sp-top .lead{margin-top:18px;max-width:34ch}
+.sp-top .cta{margin-top:28px}
+.sp-pic{border-radius:28px;overflow:hidden;aspect-ratio:4/3;background:var(--soft)}
+.sp-pic img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.sp-h{margin:0;font-size:clamp(32px,3.8vw,52px)}
+.sp-h + .lead{margin-top:14px;max-width:60ch}
+.zones-list{list-style:none;margin:clamp(28px,4vw,44px) 0 0;padding:0}
+.zones-list li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr) auto auto;align-items:center;gap:12px 32px;padding:28px 0;border-top:1px solid var(--line)}
+.zones-list h3{margin:0;font-family:var(--display);font-weight:800;font-size:clamp(22px,2.2vw,30px);letter-spacing:-.03em;line-height:1.08}
+.zones-list p{margin:0;font-size:16.5px;line-height:1.45;color:var(--text2)}
+.z-price{display:grid;justify-items:end;text-align:right}
+.z-price b{font-family:var(--display);font-weight:800;font-size:clamp(22px,2.2vw,28px);letter-spacing:-.03em;white-space:nowrap}
+.z-price small{font-size:14px;color:var(--text2)}
+.sp-crew{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center}
+.sp-crew .roles{margin:0}
+.more-l{display:inline-block;margin-top:22px;font-weight:600;color:var(--paper);text-underline-offset:4px}
+#event .ev-grid{margin-top:clamp(28px,4vw,40px)}
+#event .bridge{margin-top:16px}
+@media (max-width:860px){
+  .sp-top,.sp-crew{grid-template-columns:minmax(0,1fr)}
+  .zones-list li{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"t t" "d d" "p b";padding:24px 0}
+  .zones-list h3{grid-area:t}
+  .zones-list p{grid-area:d}
+  .z-price{grid-area:p;justify-items:start;text-align:left}
+  .zones-list .pill{grid-area:b}
+}
+@media (max-width:420px){
+  .zones-list li{grid-template-areas:"t" "d" "p" "b";grid-template-columns:minmax(0,1fr)}
+  .zones-list .pill{width:100%;padding-block:13px}
+}
+</style>
+</head>
+<body>
+<header class="top gut">
+  <div class="in">
+    <a class="logo" href="index.html">LID <small>agency<br>Шымкент</small></a>
+    <nav class="nav" id="site-nav" aria-label="Разделы">
+      <a href="index.html#marketing">Маркетинг</a>
+      <a href="prodyusirovanie.html">Продюсирование</a>
+      <a href="meropriyatiya.html" aria-current="page">Пространство</a>
+      <a href="index.html#cases">Кейсы</a>
+      <a href="komanda.html">Команда</a>
+    </nav>
+    <a class="pill dark" href="https://wa.me/77472186969?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D0%BC%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B5%20%D0%B8%D0%BB%D0%B8%20%D0%B0%D1%80%D0%B5%D0%BD%D0%B4%D1%83" target="_blank" rel="noopener">Обсудить проект</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Меню"><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="panel band gut first phero sp-hero">
+    <div class="in sp-top">
+      <div>
+        <h1 class="h2"><span class="nw">200&nbsp;м²</span><br><span class="mark">для&nbsp;вашего продукта</span></h1>
+        <p class="lead"><span class="nw">Конференц-зал, студии</span> с&nbsp;профессиональным оборудованием <span class="nw">и&nbsp;команда:</span> <span class="nw">проводите мероприятия,</span> <span class="nw">записывайте курсы</span> <span class="nw">и&nbsp;снимайте контент</span> <b><span class="nw">в&nbsp;одном месте</span></b></p>
+        <div class="cta">
+          <a class="pill dark" href="https://wa.me/77472186969?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D1%8B%D0%B5%20%D0%B4%D0%B0%D1%82%D1%8B%20%D0%B2%20%D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%B5%20LID" target="_blank" rel="noopener">Узнать свободные даты</a>
+          <a class="pill" href="#event">Мероприятие под&nbsp;ключ</a>
+        </div>
+      </div>
+      <div class="sp-pic"><img src="media/team1.jpg" alt="Команда LID в студии" width="1600" height="1259"></div>
+    </div>
+  </section>
+
+  <!-- the three rooms, each one row: what it is for, price per hour, booking -->
+  <section class="panel band gut" id="zones" aria-labelledby="zones-h">
+    <div class="in">
+      <h2 class="h2 sp-h" id="zones-h">Что есть <span class="nw">в&nbsp;пространстве</span></h2>
+      <ul class="zones-list">
+        <li>
+          <h3>Конференц-зал</h3>
+          <p><span class="nw">Мастер-классы, лекции</span> <span class="nw">и&nbsp;презентации</span> <span class="nw">для&nbsp;ваших гостей</span></p>
+          <div class="z-price"><b>от&nbsp;10&nbsp;000&nbsp;₸</b><small><span class="nw">в&nbsp;час,</span> <span class="nw">минимум 2 часа</span></small></div>
+          <a class="pill" href="https://wa.me/77472186969?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B0%D1%80%D0%B5%D0%BD%D0%B4%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BA%D0%BE%D0%BD%D1%84%D0%B5%D1%80%D0%B5%D0%BD%D1%86-%D0%B7%D0%B0%D0%BB" target="_blank" rel="noopener">Забронировать</a>
+        </li>
+        <li>
+          <h3>Студия подкастов и&nbsp;вебинаров</h3>
+          <p><span class="nw">Запись подкастов,</span> <span class="nw">вебинаров</span> <span class="nw">и&nbsp;онлайн-курсов</span></p>
+          <div class="z-price"><b>от&nbsp;10&nbsp;000&nbsp;₸</b><small>в&nbsp;час</small></div>
+          <a class="pill" href="https://wa.me/77472186969?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B0%D1%80%D0%B5%D0%BD%D0%B4%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D1%83%D0%B4%D0%B8%D1%8E%20%D0%BF%D0%BE%D0%B4%D0%BA%D0%B0%D1%81%D1%82%D0%BE%D0%B2%20%D0%B8%20%D0%B2%D0%B5%D0%B1%D0%B8%D0%BD%D0%B0%D1%80%D0%BE%D0%B2" target="_blank" rel="noopener">Забронировать</a>
+        </li>
+        <li>
+          <h3>Фотостудия</h3>
+          <p><span class="nw">Фото- и&nbsp;видеосъёмка</span> <span class="nw">с&nbsp;профессиональным светом</span></p>
+          <div class="z-price"><b>от&nbsp;8&nbsp;000&nbsp;₸</b><small>в&nbsp;час</small></div>
+          <a class="pill" href="https://wa.me/77472186969?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B0%D1%80%D0%B5%D0%BD%D0%B4%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D1%84%D0%BE%D1%82%D0%BE%D1%81%D1%82%D1%83%D0%B4%D0%B8%D1%8E" target="_blank" rel="noopener">Забронировать</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- the team that works the space -->
+  <section class="band gut on-dark" aria-labelledby="crew-h">
+    <div class="in sp-crew">
+      <div>
+        <h2 class="h2 sp-h" id="crew-h"><span class="nw">С&nbsp;вами работает</span> <span class="nw">команда</span></h2>
+        <p class="lead"><span class="nw">Вы приходите</span> <span class="nw">со&nbsp;своей экспертностью.</span> <span class="nw">Съёмку, свет, звук,</span> <span class="nw">дизайн и&nbsp;рекламу</span> <b><span class="nw">берём на&nbsp;себя</span></b></p>
+        <a class="more-l" href="komanda.html">Все услуги команды</a>
+      </div>
+      <ul class="roles">
+        <li>Видеографы</li><li>Мобилографы</li><li>Фотографы</li><li>Дизайнер</li><li>Таргетолог</li><li>SMM-специалисты</li><li>Сторисмейкер</li><li>Бренд-маркетолог</li><li>Технический специалист</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- turnkey event with its add-ons next to it -->
+  <section class="band gut tone-sky" id="event" aria-labelledby="event-h">
+    <div class="in">
+      <h2 class="h2 sp-h" id="event-h">Мероприятие <span class="nw">под&nbsp;ключ</span></h2>
+      <div class="ev-grid">
+        <article class="tf dk" id="t-guests">
+          <div class="n"><span class="tag">техническая часть</span></div>
+          <h3><span class="nw">Сбор гостей</span></h3>
+          <p class="who"><span class="nw">Вы&nbsp;готовите программу,</span> <b><span class="nw">мы&nbsp;- техническую часть:</span></b> <span class="nw">от&nbsp;афиши</span> <span class="nw">до&nbsp;напоминаний гостям</span></p>
+          <div class="price">от&nbsp;100&nbsp;000&nbsp;₸<small>за&nbsp;мероприятие</small></div>
+          <ul>
+            <li><span><b>Зал</b> <span class="nw">на&nbsp;3 часа</span></span></li>
+            <li><span><b>Афиша</b>&nbsp;мероприятия</span></li>
+            <li><span><b>Лендинг</b>&nbsp;мероприятия</span></li>
+            <li><span><b><span class="nw">Чат-бот</span></b></span></li>
+            <li><span><b>Регистрация</b>&nbsp;гостей</span></li>
+            <li><span><b>Напоминания</b>&nbsp;гостям</span></li>
+          </ul>
+          <a class="pill tf-cta" href="https://wa.me/77472186969?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D0%BC%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B5%3A%20%D1%81%D0%B1%D0%BE%D1%80%20%D0%B3%D0%BE%D1%81%D1%82%D0%B5%D0%B9" target="_blank" rel="noopener">Оставить заявку</a>
+        </article>
+        <div class="plist">
+          <h3><span class="nw">Добавьте</span> <span class="nw">к&nbsp;мероприятию</span></h3>
+          <p><span class="nw">Добавляются к&nbsp;«Сбору гостей»</span> <span class="nw">или&nbsp;к&nbsp;аренде зала</span></p>
+          <ul>
+            <li><span>Видеоотчёт</span><b>от&nbsp;60&nbsp;000&nbsp;₸</b></li>
+            <li><span><span class="nw">Таргет на&nbsp;мероприятие</span></span><b>от&nbsp;50&nbsp;000&nbsp;₸</b></li>
+            <li><span>Фотоотчёт</span><b>от&nbsp;15&nbsp;000&nbsp;₸</b></li>
+            <li><span><span class="nw">Рилс-обзор мероприятия</span></span><b>от&nbsp;10&nbsp;000&nbsp;₸</b></li>
+          </ul>
+        </div>
+      </div>
+
+      <a class="bridge" href="prodyusirovanie.html#t-event">
+        <span><b><span class="nw">Хотите продать</span> <span class="nw">на&nbsp;мероприятии свой курс?</span></b><span>Узнать подробнее</span></span>
+      </a>
+    </div>
+  </section>
+
+  <section class="panel band gut final" id="contact">
+    <div class="in">
+      <h2 class="h2">Обсудить <span class="mark">проект</span></h2>
+      <p class="lead" style="margin-inline:auto">Напишите, что&nbsp;нужно: <span class="nw">маркетинг, запуск эксперта</span> <span class="nw">или&nbsp;мероприятие.</span> <b><span class="nw">Ответим,</span> какой тариф подойдёт</b>, <span class="nw">и&nbsp;пришлём</span> <span class="nw">свободные даты студии</span></p>
+      <div class="cta">
+        <a class="pill dark" href="https://wa.me/77472186969?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D0%BC%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B5%20%D0%B8%D0%BB%D0%B8%20%D0%B0%D1%80%D0%B5%D0%BD%D0%B4%D1%83" target="_blank" rel="noopener">WhatsApp +7&nbsp;747&nbsp;218&nbsp;69&nbsp;69</a>
+        <a class="pill" href="https://www.instagram.com/lid_media_agency/" target="_blank" rel="noopener">Instagram @lid_media_agency</a>
+      </div>
+      <p class="addr"><a href="https://2gis.kz/shymkent/search/%D0%96%D0%B0%D1%83%D0%BA%D0%B0%D0%B7%D1%8B%D0%BD%203" target="_blank" rel="noopener">Шымкент, <span class="nw">Жауказын, 3,</span> <span class="nw">2 этаж</span></a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="gut">LID agency · Шымкент</footer>
+
+
+<script src="script.js?v=20261101g"></script>
+</body>
+</html>
